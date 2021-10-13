@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽奖</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+ 
+        html,
+        body,
+        .modal-cover {
+            width: 100%;
+            height: 100%;
+        }
+ 
+        body {
+            background: url('./img/background.jpg') no-repeat center;
+            background-size: 100% 100%;
+            overflow: hidden;
+        }
+ 
+        .container {
+            width: 90%;
+            height: 300px;
+            /* width: 831px; */
+            height: 336px;
+            /* border: 1px solid; */
+            display: flex;
+            flex-wrap: wrap;
+            margin: 100px auto;
+            border-radius: 6px;
+            background: #fff;
+            padding: 5px 0 5px 10px;
+        }
+ 
+        .item {
+            width: 30%;
+            height: 30%;
+            /* outline: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18;
+            border-radius: 2px;
+            /* border: 1px solid; */
+            margin: 4px;
+            box-shadow: 1px 1px 14px #ccc;
+            position: relative;
+        }
+ 
+        .cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            top: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+ 
+        .item-box {
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+ 
+        .btn-box {
+            background-color: #faa5b6;
+            cursor: pointer;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            line-height: 100px;
+        }
+ 
+        .modal {
+            width: 80%;
+            height: 150px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            background: rgba(255, 255, 255, 255);
+            border-radius: 4px;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 20px 10px 10px;
+            z-index: 2;
+        }
+ 
+        .modal .confirm-btn {
+            background: pink;
+            width: 170px;
+            height: 40px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 auto;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+ 
+        .modal-cover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            display: none;
+        }
+    </style>
+ 
+</head>
+ 
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="cover"></div>
+            <div class="item-box"></div>
+        </div>
+        <div class="item">
+            <div class="cover"></div>
+            <div class="item-box"></div>
+        </div>
+        <div class="item">
+            <div class="cover"></div>
+            <div class="item-box"></div>
+        </div>
+        <div class="item">
+            <div class="cover"></div>
+            <div class="item-box"></div>
+        </div>
+        <div class="btn-box item">
+            <div class="cover" style="background: none;"></div>
+            <div class="item-box">
+                开始抽奖
+            </div>
+        </div>
+        <div class="item">
+            <div class="cover"></div>
+            <div class="item-box"></div>
+        </div>
+        <div class="item">
+            <div class="cover"></div>
+            <div class="item-box"></div>
+        </div>
+        <div class="item">
+            <div class="cover"></div>
+            <div class="item-box"></div>
+        </div>
+        <div class="item">
+            <div class="cover"></div>
+            <div class="item-box"></div>
+        </div>
+    </div>
+    <div class="modal-cover"></div>
+    <div class="modal" style="display: none;">
+        <span></span>
+        <div class="confirm-btn">不信邪！再试一次！</div>
+    </div>
+</body>
+<script src="./index.js"></script>
+ 
+</html>
